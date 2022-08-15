@@ -6,51 +6,54 @@
 
 body {
     background-image: linear-gradient(to top, rgb(0, 137, 107), rgba(255, 77, 0, 0.9));
+    background-repeat: no-repeat;
     overflow-y: hidden;
     overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
 .game-containter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: auto;
+
 }
 
 .game-data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0.381);
     color: rgb(255, 255, 255);
-    padding: 3rem;
-    outline: 1rem solid whitesmoke;
-    margin-bottom: 7rem;
+    outline: .25rem solid whitesmoke;
+    border-radius: .5rem;
+    margin: 2rem;
+    padding: 2rem;
+    margin-bottom: 5rem;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 3rem;
+    line-height: 1rem;
+    height: 5rem;
+    width: auto;
 }
 
 .game-instruction {
     text-align: center;
-    font-size: 3rem;
-    font-family: sans-serif;
-    color: rgba(0, 0, 0, 0.779);
-    text-transform: capitalize;
-
-}
-/* .game-timer {
-
-}
-
-.game-score {
     font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.779);
+    text-transform: capitalize;
+    margin-bottom: 5rem;
+}
+
+.game-timer, .game-score, .game-level {
     line-height: 3rem;
-} */
+}
+
 
 .game-display {
     font-family: sans-serif;
     font-size: 2rem;
-    background-color: rgb(255, 234, 0);
-    border-radius: 1rem;
+    background-color: rgb(241, 49, 139);
+    border-radius: .5rem;
     border: .25rem solid whitesmoke;
     flex-direction: column;
     text-align: center;    
@@ -70,5 +73,5 @@ body {
     font-size: 2.5rem;
     text-align: center;
     text-transform:uppercase;
-
+    width: auto;
 }
