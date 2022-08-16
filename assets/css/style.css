@@ -9,8 +9,8 @@ body {
     background-repeat: no-repeat;
     overflow-y: hidden;
     overflow-x: hidden;
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 .game-containter {
@@ -26,7 +26,7 @@ body {
     outline: .25rem solid whitesmoke;
     border-radius: .5rem;
     margin: 2rem;
-    padding: 2rem;
+    padding: 3rem;
     margin-bottom: 5rem;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -41,7 +41,8 @@ body {
     font-family: sans-serif;
     color: rgba(255, 255, 255, 0.779);
     text-transform: capitalize;
-    margin-bottom: 5rem;
+    font-style: italic;  
+    margin-bottom: .25rem;
 }
 
 .game-timer, .game-score, .game-level {
@@ -60,7 +61,7 @@ body {
     text-align: center;    
     margin: 2rem;
     padding: 2rem;
-    color: rgba(0, 0, 0, 0.687);
+    color: #210030af;
 }
 
 .game-quote {
@@ -75,4 +76,11 @@ body {
     text-align: center;
     text-transform:uppercase;
     width: auto;
+}
+
+footer {
+    text-align: center;
+    margin: 7rem;
+    color: whitesmoke;
+    font-family: sans-serif;
 }
