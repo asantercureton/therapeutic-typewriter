@@ -17,9 +17,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(0, 0, 255, 0.381);
-    color: rgb(35, 0, 79);
-    outline: .25rem solid rgba(255, 173, 250, 0.422);
+    background-color: rgba(255, 255, 255, 0.381);
+    color: rgba(36, 0, 79, 0.669);
+    outline: .25rem solid rgba(171, 171, 171, 0.422);
     border-radius: .5rem;
     margin: 2rem;
     padding: 3rem;
@@ -39,24 +39,25 @@ body {
 }
 
 #timer, #score, #completed {
-    color: rgba(100, 148, 237, 0.674);
+    color: rgba(254, 254, 254, 0.651);
     font-weight: 900;
+    font-size: 2rem;
 }
 
 .game-instruction {
     text-align: center;
     font-size: 1.75rem;
     font-family: sans-serif;
-    color: rgba(255, 255, 255, 0.475);
+    color: rgb(216, 173, 3);
     text-transform: capitalize;
     font-style: italic;  
     margin-bottom: 1rem;
 }
 
 .game-display {
-    background-color: rgb(241, 49, 139);
+    background-color: rgba(255, 191, 0, 0.121);
     border-radius: .5rem;
-    border: .25rem solid rgb(255, 128, 187);
+    border: .25rem solid rgb(13, 13, 13);
     padding: 2rem;
 }
 
@@ -64,7 +65,6 @@ body {
     font-family: sans-serif;
     font-size: 1.75rem;
     color: rgba(255, 255, 255, 0.728);
-    text-shadow: 0 0 .3rem rgb(0, 0, 0);
     margin-bottom: 1rem;
     margin-left: calc(.25rem + .1rem);
 }
@@ -72,25 +72,33 @@ body {
 .quote-input {
     font-family: sans-serif;
     font-size: 1.75rem;
-    background-color: rgb(249, 173, 209);
-    color: rgba(132, 0, 75, 0.724);
-    text-shadow: 0 0 .3rem rgba(189, 91, 255, 0.721);
-    border: .1rem solid rgb(255, 128, 187);
+    background-color: rgba(47, 0, 22, 0.29);
+    color: rgba(239, 255, 198, 0.724);
+    border: .15rem solid rgb(13, 13, 13);
     border-radius: .25rem;
     outline: none;
     width: 100%;
-    height: 8rem;
+    height: 10rem;
     margin: auto;
     padding: .25rem;
 }
 
 .quote-input:focus {
-    border-color: rgba(32, 0, 37, 0.957);
+    border-color: rgba(239, 255, 198, 0.724);
 }
 
 footer {
     text-align: center;
-    color: whitesmoke;
+    color: rgba(245, 245, 245, 0.279);
     font-family: sans-serif;
-    margin-top: 10rem;
+    margin-top: 1.5rem;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+    text-decoration: underline;
 }
