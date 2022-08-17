@@ -5,7 +5,8 @@
 }
 
 body {
-    background-image: linear-gradient(to top, rgb(0, 137, 107), rgba(255, 77, 0, 0.9));
+    background-image: url(../images/stones.jpg);
+    /* background-image: linear-gradient(to top, rgb(0, 137, 107), rgba(255, 77, 0, 0.9)); */
     background-repeat: no-repeat;
     overflow: hidden;
     min-height: 100vh;
@@ -13,18 +14,31 @@ body {
     padding: 5rem;
 }
 
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container > img {
+    margin-top: -17rem;
+    transform: scale(.85);
+}
+
 .game-data {
+    box-shadow: 0 0 1rem rgb(50, 205, 125);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.381);
-    color: rgba(36, 0, 79, 0.669);
-    outline: .25rem solid rgba(171, 171, 171, 0.422);
+    background-color: rgba(242, 255, 0, 0.801);
+    color: rgba(0, 20, 10, 0.678);
+    border: .25rem solid rgb(50, 205, 125);
     border-radius: .5rem;
     margin: 2rem;
     padding: 3rem;
-    margin-top: -3rem;
-    margin-bottom: 5rem;
+    margin-top: -10rem;
+    margin-bottom: 3rem;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1rem;
@@ -36,35 +50,28 @@ body {
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: center;
+    padding: 1rem;
 }
 
 #timer, #score, #completed {
-    color: rgba(254, 254, 254, 0.651);
+    color: rgba(1, 80, 46, 0.71);
     font-weight: 900;
     font-size: 2rem;
-}
 
-.game-instruction {
-    text-align: center;
-    font-size: 1.75rem;
-    font-family: sans-serif;
-    color: rgb(216, 173, 3);
-    text-transform: capitalize;
-    font-style: italic;  
-    margin-bottom: 1rem;
 }
 
 .game-display {
-    background-color: rgba(255, 191, 0, 0.121);
+    background-color: rgba(242, 255, 0, 0.801);
     border-radius: .5rem;
-    border: .25rem solid rgb(13, 13, 13);
+    border: .25rem solid rgb(50, 205, 125);
     padding: 2rem;
 }
 
 .game-quote {
     font-family: sans-serif;
     font-size: 1.75rem;
-    color: rgba(255, 255, 255, 0.728);
+    font-weight: bold;
+    color: rgb(0, 42, 24);
     margin-bottom: 1rem;
     margin-left: calc(.25rem + .1rem);
 }
@@ -72,9 +79,10 @@ body {
 .quote-input {
     font-family: sans-serif;
     font-size: 1.75rem;
-    background-color: rgba(47, 0, 22, 0.29);
-    color: rgba(239, 255, 198, 0.724);
-    border: .15rem solid rgb(13, 13, 13);
+    font-weight: bold;
+    background-color: rgba(0, 20, 10, 0.555);
+    color: rgb(185, 255, 219);
+    border: .15rem solid rgb(50, 205, 125);
     border-radius: .25rem;
     outline: none;
     width: 100%;
@@ -84,12 +92,12 @@ body {
 }
 
 .quote-input:focus {
-    border-color: rgba(239, 255, 198, 0.724);
+    border-color: rgb(0, 20, 10);
 }
 
 footer {
     text-align: center;
-    color: rgba(245, 245, 245, 0.279);
+    color: rgba(245, 245, 245, 0.557);
     font-family: sans-serif;
     margin-top: 1.5rem;
 }
