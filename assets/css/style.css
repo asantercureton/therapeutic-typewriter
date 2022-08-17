@@ -31,9 +31,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(110, 110, 110, 0.758);
-    color: rgba(0, 20, 10, 0.826);
-    border: .25rem solid rgb(50, 205, 125);
+    background-color: rgba(72, 72, 72, 0.868);
+    color: rgb(186, 186, 186);
+    border: .25rem solid rgb(255, 255, 255);
     border-radius: .5rem;
     margin: 2rem;
     padding: 3rem;
@@ -63,7 +63,7 @@ body {
 .game-display {
     background-color: rgba(242, 255, 0, 0.801);
     border-radius: .5rem;
-    border: .25rem solid rgb(50, 205, 125);
+    border: .25rem solid rgb(255, 255, 255);
     padding: 2rem;
     box-shadow: 0 0 1rem rgb(0, 48, 23);
 }

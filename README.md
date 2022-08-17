@@ -28,7 +28,7 @@ Follow in-game prompts
 ## Screenshots
 Below is a screenshot of the project:
 
-![Image of HomePage](./assets/images/homescreen-new.jpg)
+![Image of HomePage](./assets/images/homescreen_updated.jpg)
 
 ## License
 ![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)
