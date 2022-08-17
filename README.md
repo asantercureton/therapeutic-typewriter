@@ -3,7 +3,7 @@
 ![GitHub](https://img.shields.io/github/repo-size/asantercureton/therapeutic-typing?style=plastic) ![GitHub](https://img.shields.io/github/last-commit/asantercureton/therapeutic-typing?style=plastic) ![GitHub](https://img.shields.io/github/languages/top/asantercureton/therapeutic-typing?style=plastic) ![GitHub](https://img.shields.io/github/followers/asantercureton?style=social)
 
 ## Description
-Designed a therapeutic typing game for individuals of all ages to enjoy and build typing skills.
+Designed a therapeutic typing game for individuals of all ages to enjoy and build typing skills, while enjoying therapeutic images.
 
 ## Table Of Contents
 * [Links](#links)
