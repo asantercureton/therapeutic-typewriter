@@ -46,18 +46,17 @@ body {
     width: auto;
 }
 
-.game-timer, .game-score, .game-completed {
+.game-timer, .game-score, .game-stat, .game-completed {
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: center;
-    padding: 1rem;
+    padding: 3rem;
 }
 
-#timer, #score, #completed {
+#timer, #score, #charPerSecond, #completed {
     color: rgba(0, 255, 145, 0.71);
     font-weight: 900;
     font-size: 2rem;
-
 }
 
 .game-display {

@@ -5,6 +5,7 @@ const gameTime = document.getElementById('timer');
 const gameScore = document.getElementById('score');
 const gameCompleted = document.getElementById('completed');
 const doneBtn = document.getElementById('done-btn');
+const charPerSecond = document.getElementById('charPerSecond');
 let startTime;
 let counterChar = 0;
 let score = 0;
@@ -67,9 +68,9 @@ quoteInputEl.addEventListener('input', () => {
             correct = false;
         } else if (character === characterSpan.innerText) {
             // Count correct characters
-            counterChar++;
             characterSpan.classList.add('correct');
             characterSpan.classList.remove('incorrect');
+            counterChar += 1;
         } else {
             characterSpan.classList.remove('correct');
             characterSpan.classList.add('incorrect');
@@ -78,10 +79,11 @@ quoteInputEl.addEventListener('input', () => {
     })
 
     if (correct) {
-        score += getTimertime();
+        score += Math.ceil(counterChar/getTimertime());
         gameScore.innerText = score;
         completed += 1;
         gameCompleted.innerText = completed;
+        charPerSecond.innerText = (Math.ceil(counterChar/getTimertime())/60).toFixed(2);
         renderNextQuote();
     }
 })
@@ -92,7 +94,7 @@ doneBtn.addEventListener('click', () => {
     alert(`Thank you for your time, see your Summary Analysis Report below!
     \n<<< SUMMARY ANALYSIS REPORT >>>
     \nYou completed ` + completed + ` quotes within ` + (getTimertime()/60).toFixed(1) + ` minutes.
-    \nYou averaged ` + Math.ceil(counterChar/getTimertime()/60) + ` characters per second.
+    \nYou averaged ` + (Math.ceil(counterChar/getTimertime())/60).toFixed(2) + ` characters per second.
     \nYour score is ` + score + `
     \nSee You Again Soon!`);
 });
