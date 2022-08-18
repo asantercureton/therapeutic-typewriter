@@ -22,7 +22,7 @@ body {
 
 .logo {
     margin-top: -16rem;
-    margin-bottom: -11rem;
+    margin-bottom: -12rem;
 }
 
 .logo-home {
@@ -48,14 +48,14 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(54, 59, 66, 0.694);
+    background-color: rgba(54, 59, 66, 0.87);
     color: rgb(186, 186, 186);
     border: .25rem solid rgb(255, 255, 255);
     border-radius: .5rem;
     margin: 2rem;
     padding: 3rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-top: -.05rem;
+    margin-bottom: 1rem;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1rem;
@@ -72,6 +72,7 @@ body {
 
 #timer, #score, #charPerSecond, #completed {
     color: rgba(0, 255, 145, 0.71);
+    text-shadow: 0 0 .1rem rgba(255, 255, 255, 0.425);
     font-weight: 900;
     font-size: 2rem;
 }
@@ -141,11 +142,11 @@ text-align: center;
 .homeBtn {
     font-family: sans-serif;
     font-weight: 700;
-    border: .15rem solid rgb(255, 255, 255);
-    box-shadow: 0 .1em .1rem rgb(255, 255, 255);
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    width: 5rem;
+    border: none;
+    box-shadow: 0 .1em .1rem black;
+    background-color: rgba(0, 109, 51, 0.749);
+    color: whitesmoke;
+    width: 10rem;
     height: 1.75rem;
     text-align: center;
     border-radius: 1rem;
