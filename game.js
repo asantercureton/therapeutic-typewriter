@@ -6,18 +6,15 @@ const gameScore = document.getElementById('score');
 const gameCompleted = document.getElementById('completed');
 const doneBtn = document.getElementById('done-btn');
 let startTime;
+let counterChar = 0;
 let score = 0;
 let completed = 0;
 
+// Start Timer
 let timeInterval = setInterval(getTimertime, 1000);
 
-// Start Timer
 function startTimer() {
     startTime = new Date();
-}
-
-function stopTimer() {
-    clearInterval(timeInterval);
 }
 
 function getTimertime() {
@@ -25,12 +22,19 @@ function getTimertime() {
     return gameTime.innerText = time;
 }
 
+// Stop Timer
+function stopTimer() {
+    clearInterval(timeInterval);
+}
+
+// Fetch random quote
 function getRandomQuote() {
     return fetch(Quote_API_URL)
         .then(response => response.json())
         .then(data => data.content)
 }
 
+// Render next quote
 async function renderNextQuote() {
     const quote = await getRandomQuote();
     quoteDisplayEl.innerText = '';
@@ -42,6 +46,7 @@ async function renderNextQuote() {
     quoteInputEl.value = null;
 }
 
+// initialize functions
 renderNextQuote();
 startTimer();
 
@@ -52,6 +57,7 @@ quoteInputEl.addEventListener('input', () => {
 
     let correct = true;
 
+    // Looping through every individual character
     arrayQuote.forEach((characterSpan, index) => {
         const character = arrayValue[index];
 
@@ -60,6 +66,8 @@ quoteInputEl.addEventListener('input', () => {
             characterSpan.classList.remove('incorrect');
             correct = false;
         } else if (character === characterSpan.innerText) {
+            // Count correct characters
+            counterChar++;
             characterSpan.classList.add('correct');
             characterSpan.classList.remove('incorrect');
         } else {
@@ -80,9 +88,11 @@ quoteInputEl.addEventListener('input', () => {
 
 doneBtn.addEventListener('click', () => {
     clearInterval(timeInterval);
-    alert(`Great typing, see your Summary Report below!
+
+    alert(`Thank you for your time, see your Summary Analysis Report below!
+    \n<<< SUMMARY ANALYSIS REPORT >>>
     \nYou completed ` + completed + ` quotes within ` + (getTimertime()/60).toFixed(1) + ` minutes.
+    \nYou averaged ` + Math.ceil(counterChar/getTimertime()/60) + ` characters per second.
     \nYour score is ` + score + `
-    \nSee You Soon!`);
-    // alert('You completed ' + completed + ' quotes within ' + (getTimertime()/60).toFixed(1) + ' minutes. \nYour score is ' + score + ', Great Job!');
+    \nSee You Again Soon!`);
 });
