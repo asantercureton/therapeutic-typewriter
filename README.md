@@ -26,9 +26,20 @@ Follow in-game prompts
 ## Screenshots
 Below is a screenshot of the project:
 
-![Image of HomePage](./assets/images/homescreen_updated.jpg)
+![Image of HomeScreen](./assets/images/homescreen_main.jpg)
+
+
+![Image of PlayScreenIdle](./assets/images/playscreen-idle.jpg)
+
+
+![Image of PlayScreenActive](./assets/images/playscreen_updated.jpg)
+
 
 ![Image of SummaryReport](./assets/images/summary-report.jpg)
+
+
+![Image of HighscoreScreen](./assets/images/highscore-screen.jpg)
+
 
 ---
 © 2022 CCure Coaching, Arts & Apparel.

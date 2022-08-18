@@ -22,7 +22,7 @@ body {
 
 .logo {
     margin-top: -16rem;
-    margin-bottom: -12rem;
+    margin-bottom: -10rem;
 }
 
 .logo-home {
@@ -320,7 +320,7 @@ footer {
 }
 
 .highscore {
-    background-color: rgba(250, 227, 76, 0.749);
+    background-color: rgba(250, 227, 76, 0.881);
     border: .25rem solid rgb(255, 255, 255);
 }
 
