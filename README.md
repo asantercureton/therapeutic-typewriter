@@ -12,8 +12,6 @@ Designed a therapeutic typing game for individuals of all ages to enjoy and buil
 
 * [Screenshots](#screenshots)
 
-* [License](#license)
-
 
 ## Links
 [Git Repo](https://github.com/asantercureton/therapeutic-typing)
@@ -30,8 +28,7 @@ Below is a screenshot of the project:
 
 ![Image of HomePage](./assets/images/homescreen_updated.jpg)
 
-## License
-![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)
+![Image of SummaryReport](./assets/images/summary-report.jpg)
 
 ---
 © 2022 CCure Coaching, Arts & Apparel.

@@ -80,6 +80,9 @@ quoteInputEl.addEventListener('input', () => {
 
 doneBtn.addEventListener('click', () => {
     clearInterval(timeInterval);
-    alert('Great typing, click OK to see your Summary Report!');
-    alert('You completed ' + completed + ' quotes within ' + (getTimertime()/60).toFixed(1) + ' minutes. \nYour score is ' + score + ', Great Job!');
+    alert(`Great typing, see your Summary Report below!
+    \nYou completed ` + completed + ` quotes within ` + (getTimertime()/60).toFixed(1) + ` minutes.
+    \nYour score is ` + score + `
+    \nSee You Soon!`);
+    // alert('You completed ' + completed + ' quotes within ' + (getTimertime()/60).toFixed(1) + ' minutes. \nYour score is ' + score + ', Great Job!');
 });
