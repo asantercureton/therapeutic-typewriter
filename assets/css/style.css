@@ -134,3 +134,12 @@ footer {
     color: red;
     text-decoration: underline;
 }
+
+.highscore {
+    background-color: rgba(242, 255, 0, 0.801);
+}
+
+table > thead > tr {
+   display: flex;
+   justify-content: space-around;
+}
