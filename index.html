@@ -11,36 +11,46 @@
 
 <body>
     <div class="game-container">
-        <img class="logo" src="./assets/images/therapeutic-typing-font_three_8.17.2022.png" alt="logo for game" />
-        
+        <!-- logo -->
+        <a href="./homescreen.html">
+            <img class="logo" src="./assets/images/therapeutic-typing-font_three_8.17.2022.png" alt="logo for game" />
+        </a>
+
+
         <!-- Game Data Component -->
-        <div class="game-data">
-            <div class="game-timer">
-                <h5>TIME</h5>
-                <p id="timer">0</p>
-            </div>
+        <div class="game-center">
+            <div class="game-data">
+                <div class="game-timer">
+                    <h5>TIME</h5>
+                    <p id="timer">0</p>
+                </div>
 
-            <div class="game-stat">
-                <h5>CHAR/SEC</h5>
-                <p id="charPerSecond">0</p>
-            </div>
+                <div class="game-stat">
+                    <h5>CHAR/SEC</h5>
+                    <p id="charPerSecond">0</p>
+                </div>
 
-            <div class="game-score">
-                <h5>SCORE</h5>
-                <p id="score">0</p>
-            </div>
+                <div class="game-score">
+                    <h5>SCORE</h5>
+                    <p id="score">0</p>
+                </div>
 
-            <div class="game-completed">
-                <h5>COMPLETED</h5>
-                <p id="completed">0</p>
+                <div class="game-completed">
+                    <h5>COMPLETED</h5>
+                    <p id="completed">0</p>
+                </div>
+            </div>
+            <div>
+                <!-- link to highscores page -->
+                <a href="./highsccore.html"><button class="highscore-btn">HIGHSCORES</button></a>
             </div>
         </div>
-        
+
         <!-- Game Display Component -->
         <div class="game-display">
             <div id="gameQuote" class="game-quote">Shows what to type</div>
             <textarea id="quoteInput" class="quote-input" placeholder="Begin typing here..." autofocus></textarea>
-            <button id="done-btn" type="button">Done</button>
+            <button id="done-btn" type="button">DONE</button>
         </div>
     </div>
     <footer>© 2022 CCure Coaching, Arts & Apparel.</footer>
