@@ -83,7 +83,7 @@ quoteInputEl.addEventListener('input', () => {
         gameScore.innerText = score;
         completed += 1;
         gameCompleted.innerText = completed;
-        charPerSecond.innerText = (Math.ceil(counterChar/getTimertime())/60).toFixed(2);
+        charPerSecond.innerText = (Math.floor(counterChar/getTimertime())/60).toFixed(2);
         renderNextQuote();
     }
 })
@@ -91,10 +91,13 @@ quoteInputEl.addEventListener('input', () => {
 doneBtn.addEventListener('click', () => {
     clearInterval(timeInterval);
 
+    let characterPerSecond = charPerSecond.innerHTML;
+    let timeElapsed = gameTime.innerHTML;
+
     alert(`Thank you for your time, see your Summary Analysis Report below!
     \n<<< SUMMARY ANALYSIS REPORT >>>
-    \nYou completed ` + completed + ` quotes within ` + (getTimertime()/60).toFixed(1) + ` minutes.
-    \nYou averaged ` + (Math.ceil(counterChar/getTimertime())/60).toFixed(2) + ` characters per second.
+    \nYou completed ` + completed + ` quotes within ` + (timeElapsed/60).toFixed(2) + ` minutes.
+    \nYou averaged ` + characterPerSecond + ` characters per second.
     \nYour score is ` + score + `
     \nSee You Again Soon!`);
 });
