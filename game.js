@@ -4,21 +4,25 @@ const quoteInputEl = document.getElementById('quoteInput');
 const gameTime = document.getElementById('timer');
 const gameScore = document.getElementById('score');
 const gameCompleted = document.getElementById('completed');
+const doneBtn = document.getElementById('done-btn');
 let startTime;
 let score = 0;
 let completed = 0;
 
+let timeInterval = setInterval(getTimertime, 1000);
 
 // Start Timer
 function startTimer() {
     startTime = new Date();
-    setInterval(() => {
-        gameTime.innerText = getTimertime();
-    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timeInterval);
 }
 
 function getTimertime() {
-    return Math.floor((new Date() - startTime) / 1000);
+    let time = Math.floor((new Date() - startTime) / 1000);
+    return gameTime.innerText = time;
 }
 
 function getRandomQuote() {
@@ -41,7 +45,7 @@ async function renderNextQuote() {
 renderNextQuote();
 startTimer();
 
-
+// event listeners
 quoteInputEl.addEventListener('input', () => {
     const arrayQuote = quoteDisplayEl.querySelectorAll('span');
     const arrayValue = quoteInputEl.value.split('');
@@ -73,3 +77,9 @@ quoteInputEl.addEventListener('input', () => {
         renderNextQuote();
     }
 })
+
+doneBtn.addEventListener('click', () => {
+    clearInterval(timeInterval);
+    alert('Great typing, click OK to see your Summary Report!');
+    alert('You completed ' + completed + ' quotes within ' + (getTimertime()/60).toFixed(1) + ' minutes. \nYour score is ' + score + ', Great Job!');
+});
