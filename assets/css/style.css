@@ -22,6 +22,7 @@ body {
 
 .logo {
     margin-top: -16rem;
+    margin-bottom: -11rem;
 }
 
 .logo-home {
@@ -34,6 +35,7 @@ body {
     display: flex;
     margin: auto;
     margin-top: -16rem;
+    margin-bottom: -9rem;
 }
 
 .game-center {
@@ -46,13 +48,13 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(72, 72, 72, 0.868);
+    background-color: rgba(54, 59, 66, 0.694);
     color: rgb(186, 186, 186);
     border: .25rem solid rgb(255, 255, 255);
     border-radius: .5rem;
     margin: 2rem;
     padding: 3rem;
-    margin-top: -10rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -136,6 +138,30 @@ text-align: center;
     margin-bottom: 5rem;
 }
 
+.homeBtn {
+    font-family: sans-serif;
+    font-weight: 700;
+    border: .15rem solid rgb(255, 255, 255);
+    box-shadow: 0 .1em .1rem rgb(255, 255, 255);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    width: 5rem;
+    height: 1.75rem;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+.homeBtn:hover {
+    font-weight: 400;
+    border: .15rem solid rgba(0, 215, 136, 0.749);
+    color: rgba(35, 35, 35, 0.749);
+    box-shadow: 0 0 .5rem rgba(0, 215, 136, 0.749);
+    background-color: rgba(255, 255, 255, 0.632);
+    cursor: pointer;
+    transition: .15s ease-in;
+}
+
 .highscore-btn {
     font-family: sans-serif;
     font-weight: 700;
@@ -176,9 +202,9 @@ text-align: center;
 
 #done-btn:hover:hover {
     font-weight: 400;
-    border: .15rem solid rgba(250, 227, 76, 0.749);
+    border: .15rem solid rgba(186, 115, 0, 0.913);
     color: rgba(35, 35, 35, 0.749);
-    box-shadow: 0 0 .5rem rgba(250, 227, 76, 0.749);
+    box-shadow: 0 0 .5rem rgba(186, 115, 0, 0.913);
     background-color: rgba(255, 255, 255, 0.632);
     cursor: pointer;
     transition: .15s ease-in;
