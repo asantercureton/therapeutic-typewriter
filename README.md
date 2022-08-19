@@ -14,7 +14,7 @@ Designed a therapeutic typing game for individuals of all ages to enjoy and buil
 
 
 ## Links
-[Git Repo](https://github.com/asantercureton/therapeutic-typing)
+[Git Repo](https://github.com/asantercureton/therapeutic-typewriter)
 
 <!-- [Heroku Link]() -->
 
@@ -26,19 +26,19 @@ Follow in-game prompts
 ## Screenshots
 Below is a screenshot of the project:
 
-![Image of HomeScreen](./assets/images/homescreen_main.jpg)
+![Image of HomeScreen](./client/assets/images/homescreen_main.jpg)
 
 
-![Image of PlayScreenIdle](./assets/images/playscreen-idle.jpg)
+![Image of PlayScreenIdle](./client/assets/images/playscreen-idle.jpg)
 
 
-![Image of PlayScreenActive](./assets/images/playscreen_updated.jpg)
+![Image of PlayScreenActive](./client/assets/images/playscreen_updated.jpg)
 
 
-![Image of SummaryReport](./assets/images/summary-report.jpg)
+![Image of SummaryReport](./client/assets/images/summary-report.jpg)
 
 
-![Image of HighscoreScreen](./assets/images/highscore-screen.jpg)
+![Image of HighscoreScreen](./client/assets/images/highscore-screen.jpg)
 
 
 ---
