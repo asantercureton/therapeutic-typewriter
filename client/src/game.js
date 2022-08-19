@@ -95,9 +95,9 @@ quoteInputEl.addEventListener('input', () => {
         //render next quote
         renderNextQuote();
     }
-    quoteList.forEach((quote) => {
-        console.log(quote);
-    });
+    // quoteList.forEach((quote) => {
+    //     console.log(quote);
+    // });
 })
 
 doneBtn.addEventListener('click', () => {
