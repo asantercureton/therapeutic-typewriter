@@ -10,6 +10,9 @@ let startTime;
 let counterChar = 0;
 let score = 0;
 let completed = 0;
+let quoteList = [];
+
+
 
 // Start Timer
 let timeInterval = setInterval(getTimertime, 1000);
@@ -79,13 +82,22 @@ quoteInputEl.addEventListener('input', () => {
     })
 
     if (correct) {
-        score += Math.ceil(counterChar/getTimertime());
+        // add completed quote to array
+        quoteList.push(quoteDisplayEl.innerText);
+
+        score += Math.ceil(counterChar / getTimertime());
         gameScore.innerText = score;
         completed += 1;
         gameCompleted.innerText = completed;
-        charPerSecond.innerText = (Math.floor(counterChar/getTimertime())/60).toFixed(2);
+        charPerSecond.innerText = (Math.floor(counterChar / getTimertime()) / 60).toFixed(2);
+        // local storage for quote list array
+        localStorage.setItem("listOfQuotes", quoteList);
+        //render next quote
         renderNextQuote();
     }
+    quoteList.forEach((quote) => {
+        console.log(quote);
+    });
 })
 
 doneBtn.addEventListener('click', () => {
@@ -93,11 +105,11 @@ doneBtn.addEventListener('click', () => {
 
     let characterPerSecond = charPerSecond.innerHTML;
     let timeElapsed = gameTime.innerHTML;
+    let listOfQuotes = localStorage.getItem("listOfQuotes");
 
     alert(`Thank you for your time, see your Summary Analysis Report below!
-    \n<<< SUMMARY ANALYSIS REPORT >>>
-    \nYou completed ` + completed + ` quotes within ` + (timeElapsed/60).toFixed(2) + ` minutes.
-    \nYou averaged ` + characterPerSecond + ` characters per second.
+    \nYou completed ` + completed + ` quotes within ` + (timeElapsed / 60).toFixed(2) + ` minutes at ` + characterPerSecond + ` characters per second.
     \nYour score is ` + score + `
-    \nSee You Again Soon!`);
+    \nList of Completed Quotes:
+    \n`+ listOfQuotes);
 });
