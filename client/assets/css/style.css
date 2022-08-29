@@ -355,7 +355,9 @@ footer {
     border: .25rem solid rgb(255, 255, 255);
 }
 
-table > thead > tr {
-   display: flex;
-   justify-content: space-around;
+#high-score {
+    font-family: sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around;
 }

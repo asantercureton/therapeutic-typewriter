@@ -6,11 +6,13 @@ const gameScore = document.getElementById('score');
 const gameCompleted = document.getElementById('completed');
 const doneBtn = document.getElementById('done-btn');
 const charPerSecond = document.getElementById('charPerSecond');
+// const outputHighscore = document.getElementById('high-score');
 let startTime;
 let counterChar = 0;
 let score = 0;
 let completed = 0;
 let quoteList = [];
+// let endScore = [];
 
 
 
@@ -85,27 +87,36 @@ quoteInputEl.addEventListener('input', () => {
         // add completed quote to array
         quoteList.push(quoteDisplayEl.innerText);
 
-        score += Math.ceil(counterChar / getTimertime());
+        score += Math.floor(counterChar / getTimertime());
         gameScore.innerText = score;
         completed += 1;
         gameCompleted.innerText = completed;
         charPerSecond.innerText = (Math.floor(counterChar / getTimertime()) / 60).toFixed(2);
         // local storage for quote list array
+        // localStorage.setItem("highscore", score);
         localStorage.setItem("listOfQuotes", quoteList);
+        localStorage.setItem("numberCompleted", completed);
         //render next quote
         renderNextQuote();
     }
     // quoteList.forEach((quote) => {
     //     console.log(quote);
     // });
+
 })
+
 
 doneBtn.addEventListener('click', () => {
     clearInterval(timeInterval);
 
+    // endScore.push(score);
+
+    // console.log(endScore);
+
     let characterPerSecond = charPerSecond.innerHTML;
     let timeElapsed = gameTime.innerHTML;
     let listOfQuotes = localStorage.getItem("listOfQuotes");
+
 
     alert(`Thank you for your time, see your Summary Analysis Report below!
     \nYou completed ` + completed + ` quotes within ` + (timeElapsed / 60).toFixed(2) + ` minutes at ` + characterPerSecond + ` characters per second.
