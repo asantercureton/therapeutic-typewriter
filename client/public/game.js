@@ -113,8 +113,17 @@ doneBtn.addEventListener('click', () => {
     let timeElapsed = gameTime.innerHTML;
     let listOfQuotes = localStorage.getItem("listOfQuotes");
 
-    // display seconds in alert if under 1 minute
-    if (timeElapsed < 60) {
+    // display seconds in alert if greater than 0 second but under 2 seconds
+    if (timeElapsed > 0 && timeElapsed < 2) {
+        alert(`Thank you for your time, see your Summary Analysis Report below!
+        \nYou completed ` + completed + ` quotes within ` + timeElapsed + ` second at ` + characterPerSecond + ` characters per second.
+        \nYour score is ` + score + `
+        \nList of Completed Quotes:
+        \n`+ listOfQuotes);
+    }
+
+    // display seconds in alert if greater than 1 second but under 1 minute
+    if (timeElapsed > 1 && timeElapsed < 60) {
         alert(`Thank you for your time, see your Summary Analysis Report below!
         \nYou completed ` + completed + ` quotes within ` + timeElapsed + ` seconds at ` + characterPerSecond + ` characters per second.
         \nYour score is ` + score + `
