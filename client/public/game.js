@@ -109,18 +109,25 @@ quoteInputEl.addEventListener('input', () => {
 doneBtn.addEventListener('click', () => {
     clearInterval(timeInterval);
 
-    // endScore.push(score);
-
-    // console.log(endScore);
-
     let characterPerSecond = charPerSecond.innerHTML;
     let timeElapsed = gameTime.innerHTML;
     let listOfQuotes = localStorage.getItem("listOfQuotes");
 
+    // display seconds in alert if under 1 minute
+    if (timeElapsed < 60) {
+        alert(`Thank you for your time, see your Summary Analysis Report below!
+        \nYou completed ` + completed + ` quotes within ` + timeElapsed + ` seconds at ` + characterPerSecond + ` characters per second.
+        \nYour score is ` + score + `
+        \nList of Completed Quotes:
+        \n`+ listOfQuotes);
+    }
 
-    alert(`Thank you for your time, see your Summary Analysis Report below!
-    \nYou completed ` + completed + ` quotes within ` + (timeElapsed / 60).toFixed(2) + ` minutes at ` + characterPerSecond + ` characters per second.
-    \nYour score is ` + score + `
-    \nList of Completed Quotes:
-    \n`+ listOfQuotes);
+    // display minutes in alert if at and over 1 minute
+    if (timeElapsed >= 60) {
+        alert(`Thank you for your time, see your Summary Analysis Report below!
+        \nYou completed ` + completed + ` quotes within ` + (timeElapsed / 60).toFixed(2) + ` minutes at ` + characterPerSecond + ` characters per second.
+        \nYour score is ` + score + `
+        \nList of Completed Quotes:
+        \n`+ listOfQuotes);
+    }
 });
