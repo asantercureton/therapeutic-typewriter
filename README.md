@@ -18,7 +18,7 @@ Designed a therapeutic typing game for individuals of all ages to enjoy and buil
 ## Links
 [Git Repo](https://github.com/asantercureton/therapeutic-typewriter)
 
-<!-- [Heroku Link]() -->
+[Live Link - GitHub Pages](https://asantercureton.github.io/therapeutic-typewriter/)
 
 
 ## Instructions

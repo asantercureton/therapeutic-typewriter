@@ -6,13 +6,11 @@ const gameScore = document.getElementById('score');
 const gameCompleted = document.getElementById('completed');
 const doneBtn = document.getElementById('done-btn');
 const charPerSecond = document.getElementById('charPerSecond');
-// const outputHighscore = document.getElementById('high-score');
 let startTime;
 let counterChar = 0;
 let score = 0;
 let completed = 0;
 let quoteList = [];
-// let endScore = [];
 
 
 
@@ -51,6 +49,11 @@ async function renderNextQuote() {
     })
     quoteInputEl.value = null;
 }
+
+// Clear local storage
+// function clearLocal() {
+//     localStorage.clear();
+//   }
 
 // initialize functions
 renderNextQuote();
@@ -92,17 +95,11 @@ quoteInputEl.addEventListener('input', () => {
         completed += 1;
         gameCompleted.innerText = completed;
         charPerSecond.innerText = (Math.floor(counterChar / getTimertime()) / 60).toFixed(2);
-        // local storage for quote list array
-        // localStorage.setItem("highscore", score);
         localStorage.setItem("listOfQuotes", quoteList);
         localStorage.setItem("numberCompleted", completed);
         //render next quote
         renderNextQuote();
     }
-    // quoteList.forEach((quote) => {
-    //     console.log(quote);
-    // });
-
 })
 
 
@@ -120,6 +117,8 @@ doneBtn.addEventListener('click', () => {
         \nYour score is ` + score + `
         \nList of Completed Quotes:
         \n`+ listOfQuotes);
+
+
     }
 
     // display seconds in alert if greater than 1 second but under 1 minute
@@ -139,4 +138,6 @@ doneBtn.addEventListener('click', () => {
         \nList of Completed Quotes:
         \n`+ listOfQuotes);
     }
+
+    // clearLocal();
 });
