@@ -117,8 +117,6 @@ doneBtn.addEventListener('click', () => {
         \nYour score is ` + score + `
         \nList of Completed Quotes:
         \n`+ listOfQuotes);
-
-
     }
 
     // display seconds in alert if greater than 1 second but under 1 minute
