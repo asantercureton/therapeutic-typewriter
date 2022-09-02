@@ -8,11 +8,13 @@ body {
     background-image: url(../images/stones-black.jpg);
     /* background-image: linear-gradient(to top, rgb(0, 137, 107), rgba(255, 77, 0, 0.9)); */
     background-repeat: no-repeat;
-    overflow: hidden;
     margin: auto;
     padding: 5rem;
 }
 
+main {
+    text-align: center;
+}
 .game-container {
     display: flex;
     flex-direction: column;
@@ -26,8 +28,6 @@ body {
 }
 
 .logo-home {
-    display: flex;
-    margin: auto;
     margin-top: -16rem;
     margin-bottom: -8rem;
 }
@@ -53,29 +53,28 @@ body {
     color: rgb(186, 186, 186);
     border: .25rem solid rgb(255, 255, 255);
     border-radius: .5rem;
-    margin: 2rem;
-    padding: 3rem;
     margin-top: -.05rem;
     margin-bottom: 1rem;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1rem;
-    height: 5rem;
+    height: 4rem;
     width: auto;
 }
 
 .game-timer, .game-score, .game-stat, .game-completed {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
     text-align: center;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 #timer, #score, #charPerSecond, #completed {
     color: rgba(0, 255, 145, 0.71);
     text-shadow: 0 0 .1rem rgba(255, 255, 255, 0.425);
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding: .25rem;
 }
 
 .game-display {
@@ -120,13 +119,7 @@ body {
 .homescreen {
     display: flex;
     flex-direction: column;
-text-align: center;
-}
-
-.homeNav {
-    display: inline;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .instructions {
@@ -138,9 +131,7 @@ text-align: center;
     text-align: center;
     background-color: rgba(46, 30, 0, 0.299);
     border: .1rem solid whitesmoke;
-    border-radius: .5rem
-    ;
-    padding: 5rem;
+    border-radius: .5rem;
     margin: auto;
     margin-bottom: 3rem;
 }
@@ -169,7 +160,7 @@ text-align: center;
     transition: .15s ease-in;
 }
 
-.highscore-btn {
+.play-btn {
     font-family: sans-serif;
     font-weight: 700;
     border: none;
@@ -183,7 +174,7 @@ text-align: center;
     margin: 1rem;
 }
 
-.highscore-btn:hover {
+.play-btn:hover {
     font-weight: 400;
     border: .15rem solid rgba(250, 227, 76, 0.749);
     color: rgba(35, 35, 35, 0.749);
@@ -360,4 +351,92 @@ footer {
     font-weight: 700;
     display: flex;
     justify-content: space-around;
+}
+
+/* Mobile Responsiveness @ max-width 280px */
+@media screen and (max-width: 280px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        transform: scale(.45);
+        margin-top: -17.5rem;
+        text-align: center;
+    }
+
+    .logo-home {
+        margin: 0;
+        margin-top: -15rem;
+        text-align: center;
+        margin-bottom: -9rem;
+        transform: scale(.6);
+    }
+
+    .instructions {
+        font-size:x-large;
+        font-weight: 900;
+        margin: 0;
+        width: 100%;
+    }
+
+    .playHome-btn {
+        margin-top: 5rem;
+        width: 200px;
+    }
+
+    .game-display {
+        margin-top: -1rem;
+        width: auto;
+        height: auto;
+    }
+
+    .game-data {
+        height: 100px;
+        margin: 0;
+        padding: 2rem;
+    }
+
+    .game-btns {
+        margin-top: .5rem;
+        justify-content: space-around;
+    }
+
+    .game-center {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        margin-top: -3.5rem;
+    }
+
+    .game-timer, .game-score, .game-stat, .game-completed {
+        font-size: medium;
+        line-height: 1.5rem;
+        padding: .75rem;
+
+    }
+    
+    #timer, #score, #charPerSecond, #completed {
+        color: rgba(0, 255, 145, 0.71);
+        text-shadow: 0 0 .1rem rgba(255, 255, 255, 0.425);
+        font-weight: 700;
+        font-size: large;
+    }
+    
+    .homeBtn, .play-btn, #done-btn {
+        font-size: x-small;
+        margin: 0;
+        padding: 0;
+    }
+
+    .game-quote {
+        font-size: x-large;
+    }
+
+    footer {
+        font-size: small;
+    }
 }
