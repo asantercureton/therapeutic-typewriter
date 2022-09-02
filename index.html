@@ -24,6 +24,16 @@
             <a href="./play.html"><button class="playHome-btn">PLAY</button></a>
 
         </div>
+
+        <audio id="song">
+            <source src="./client/assets/music/therapeutic-vibes_8.4.2020.mp3">
+        </audio>
+
+        <script>
+            window.addEventListener('click', () => {
+                document.getElementById('song').play();
+            })
+        </script>
     </main>
     <footer>© 2022 CCure Coaching, Arts & Apparel.</footer>
 

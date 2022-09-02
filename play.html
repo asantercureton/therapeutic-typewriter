@@ -58,6 +58,18 @@
             <textarea id="quoteInput" class="quote-input" placeholder="Begin typing here..." autofocus></textarea>
         </div>
     </div>
+
+    <!-- Audio -->
+    <audio id="song">
+        <source src="./client/assets/music/therapeutic-vibes_8.4.2020.mp3">
+    </audio>
+    
+    <!-- JS for Audio -->
+    <script>
+        window.addEventListener('click', () => {
+            document.getElementById('song').play();
+        })
+    </script>
     <footer>© 2022 CCure Coaching, Arts & Apparel.</footer>
 </body>
 
